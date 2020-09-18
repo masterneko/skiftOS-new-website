@@ -1,0 +1,249 @@
+:root {
+    --background-colour: #333333;
+    --middleground-colour: #444444;
+    --foreground-colour: #FFFFFF;
+    --foreground-inactive: #888888;
+    --foreground-disabled: #888888;
+    --border-colour: #FFFFFF20;
+    --selection-colour: #0066FF80;
+    --selection-inactive-colour: #88888840;
+    --accent-colour: #0066FF;
+    --accent-inactive-colour: #444444;
+    --link-colour: #4287F5;
+    --wallpaper-url: url(https://raw.githubusercontent.com/skiftOS/skift/master/sysroot/System/Wallpapers/mountains.png);
+    --transparency-level: 0.95;
+    --border-radius: 3px;
+    --font: "sans";
+}
+
+#status-bar
+{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    border: 1px solid var(--border-colour);
+    color: var(--foreground-colour);
+    background: var(--background-colour);
+    z-index: 5000;
+    padding: 5px;
+    display: none;
+}
+
+body
+{
+    padding: 0px;
+    margin: 0px;
+    background-image: var(--wallpaper-url);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+    font-family: var(--font) !important;
+    font-size: 13px !important;
+    height: 100vh;
+    background-position: center center;
+    background-repeat: no-repeat; 
+    background-size: cover;
+}
+
+*
+{
+    padding: 0px;
+    margin: 0px;
+    cursor: url("cursor-default.png"), default;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.bubble
+{
+    background: var(--accent-colour);
+    border-radius: var(--border-radius);
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.allow-copy
+{
+    -webkit-touch-callout: default;
+    -webkit-user-select: default;
+    -khtml-user-select: none;
+    -moz-user-select: default;
+    -ms-user-select: default;
+    user-select: text;
+}
+
+.middleground
+{
+    background: var(--middleground-colour);
+}
+
+.link
+{
+    text-decoration: none;
+    color: var(--link-colour);
+    border: none;
+    outline: none;
+}
+
+.fill-transparent
+{
+    background: var(--background-colour);
+    opacity: var(--transparency-level);
+}
+
+.panel
+{
+    width: 100%;
+    border-bottom-style: solid;
+    border-width: 1px;
+    border-color: var(--border-colour);
+    display: grid;
+    grid-template-columns: max-content auto;
+    align-items: center;
+    position: absolute;
+    z-index: 1000;
+}
+
+.menu
+{
+    height: 100%;
+    width: 300px;
+    border-right-style: solid;
+    border-width: 1px;
+    border-color: var(--border-colour);
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    z-index: 2000;
+}
+
+.menu-item
+{
+    height: 35px;
+}
+
+.align-left
+{
+    text-align: left;
+}
+
+button
+{
+    padding: 6px;
+    border: none;
+    outline: none;
+    border-radius: var(--border-radius);
+}
+
+button:hover
+{
+    outline: 0;
+}
+
+button:active
+{
+    outline: 0;
+}
+
+.normal-button
+{
+    color: var(--foreground-colour);
+    background: var(--background-colour);
+}
+
+.outline
+{
+    border-style: solid;
+    border-width: 1px;
+    border-color: var(--border-colour);
+}
+
+.accent-button
+{
+    color: var(--foreground-colour);
+    background: var(--accent-colour);
+}
+
+.accent-button:hover
+{
+    background: var(--accent-colour);
+    filter: brightness(130%);
+}
+
+.margin-button
+{
+    margin: 5px;
+}
+
+#time
+{
+    margin: 5px;
+    text-align: center;
+    color: var(--foreground-colour);
+}
+
+.window
+{
+    background: var(--background-colour);
+    color: var(--foreground-colour);
+    border-style: solid;
+    border-width: 1px;
+    border-color: var(--accent-colour);
+    position: absolute;
+}
+
+.titlebar
+{
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+
+    margin-bottom: 5px;
+}
+
+li 
+{
+    margin-bottom: 5px;
+}
+
+.scrollbar
+{
+    overflow-y: auto;
+	overflow-x: hidden;
+    scrollbar-color: var(--middleground-colour) transparent;
+    scrollbar-width: thin;
+}
+
+.titlebar-button
+{
+    float: right;
+    padding: 0px;
+    height: 20px;
+    width: 20px;
+}
+
+.release-button
+{
+    padding-left: 5px;
+    color: var(--foreground-colour);
+}
+
+*::-moz-focus-inner /* For some browsers */
+{
+    border: 0; 
+}
+
+.normal-button:hover
+{
+    background: var(--middleground-colour);
+}
+
+.normal-button:active
+{
+    background: var(--border-colour);
+}

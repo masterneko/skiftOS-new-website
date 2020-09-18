@@ -1,0 +1,24 @@
+<h2>Releases</h2>
+<div class="bubble">
+    <b style="font-size: 14px;">Latest release</b>
+    <p id="${app.name + app.identifier}-latest-release-name">Version</p>
+    <div id="${app.name + app.identifier}-release-list-div"></div>
+</div>
+
+<h3>Running in QEMU</h3>
+<p style="margin-top: 5px;">QEMU is the prefered platform for testing the operating system. </p>
+<br>
+<code class="bubble middleground allow-copy">qemu-system-x86_64 -cdrom bootdisk.iso -m 256M -enable-kvm -serial stdio</code>
+<br>
+<br>
+
+<h3>Running on VirtualBox</h3>
+
+<div style="padding-left: 30px">
+    <ul>
+        <li>Other/Unknown operating system type</li>
+        <li>At least 128MiB of ram</li>
+        <li>No hard drive needed</li>
+        <li>With hardware acceleration</li>
+    </ul>
+</div>
