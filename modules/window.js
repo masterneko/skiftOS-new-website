@@ -66,7 +66,7 @@ function window_create(parent, name, icon = "application", type = "standard", ti
 
 	containing_window.setAttribute("id", prefix + "-window");
 	containing_window.setAttribute("class", "window");
-	containing_window.setAttribute("style", `width: ${width}; height: ${height};`);
+	containing_window.setAttribute("style", `width: ${win.width}; height: ${win.height};`);
 	titlebar.innerHTML = titlebar_html;
 	titlebar.setAttribute("class", "titlebar");
 	titlebar.setAttribute("id", `${prefix}-titlebar`)
@@ -88,7 +88,7 @@ function window_create(parent, name, icon = "application", type = "standard", ti
 
 	// This is to stop the root expanding outside the width of the window
 	var titlebar_height = document.getElementById(win.titlebar.titlebar_id).clientHeight;
-	var h = parseInt(height) - titlebar_height;
+	var h = parseInt(win.height) - titlebar_height;
 	$(`#${win.window_id}-root`).height((h - (titlebar_height / 2) - 1));
 
 	return win;
