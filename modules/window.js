@@ -121,7 +121,7 @@ function window_create_from_url(parent, name, icon = "application", type = "stan
 				onload(app);
 			}
 		}
-		else if (request.status === 404 || request.status === 0) {
+		else if (request.status === 404 || request.status === 401 || request.status === 0) {
 			if (is_debug) {
 				console.error(`failed to load ${url}.`);
 				console.warn("This could be because you are running in file mode. eg. file:///skiftOS-tour/index.html. Consider using a live server")
